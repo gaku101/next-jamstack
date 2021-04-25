@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import Link from "next/link";
 import React from "react";
 
@@ -25,7 +26,7 @@ const Home = ({ blogs }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const key = {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
